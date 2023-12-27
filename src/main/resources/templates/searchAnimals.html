@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<title>動物検索</title>
+</head>
+<body>
+	<h1>動物検索画面</h1>
+	<form action="#" th:action="@{/result}" method="get">
+		<select name="index" id="">
+			<option value="0">イヌ</option>
+			<option value="1">ネコ</option>
+			<option value="2">レッサーパンダ</option>
+			<option value="3">ライオン</option>
+			<option value="4">ラッコ</option>
+			<option value="5">ブタ</option>
+			<option value="6">test</option>
+		</select>
+	<input type="submit" value="検索"/>
+	</form>
+</body>
+</html>
