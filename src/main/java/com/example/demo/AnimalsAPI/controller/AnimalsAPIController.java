@@ -1,4 +1,4 @@
-package com.example.demo.AnimalsAPI;
+package com.example.demo.AnimalsAPI.controller;
 
 import java.io.IOException;
 
@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.AnimalsAPI.data.Animals;
+import com.example.demo.AnimalsAPI.service.AnimalsAPIService;
 
 @Controller
 public class AnimalsAPIController {
@@ -17,7 +20,12 @@ public class AnimalsAPIController {
 	}
 	
 	@GetMapping("/search")
-	public String search() {
+	public String search(Model model) throws IOException {
+		
+		Animals[] animalsList = animalsAPIService.getAnimalsList();
+		
+		model.addAttribute("animalsList", animalsList);
+		
 		return "searchAnimals.html";
 	}
 	

@@ -1,4 +1,4 @@
-package com.example.demo.AnimalsAPI;
+package com.example.demo.AnimalsAPI.repository;
 
 import java.io.IOException;
 
@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.demo.AnimalsAPI.data.Animals;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Repository
